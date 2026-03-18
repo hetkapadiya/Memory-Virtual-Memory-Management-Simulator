@@ -1,0 +1,99 @@
+:root {
+    --bg: #f4f6f8;
+    --primary: #2980b9;
+    --p1: #3498db; --p2: #2ecc71; --p3: #e67e22;
+    --free: #ecf0f1;
+}
+
+body { font-family: 'Segoe UI', sans-serif; background: var(--bg); margin: 0; color: #333; }
+header { background: #2c3e50; color: white; text-align: center; padding: 20px 10px; border-bottom: 4px solid var(--primary); }
+header p { opacity: 0.8; font-style: italic; }
+
+.tab-nav { display: flex; justify-content: center; background: white; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+.tab-btn { padding: 15px 25px; border: none; background: none; cursor: pointer; font-weight: bold; color: #7f8c8d; transition: 0.3s; }
+.tab-btn.active { color: var(--primary); border-bottom: 3px solid var(--primary); }
+
+.container { max-width: 1000px; margin: 30px auto; background: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+.control-panel { display: flex; gap: 20px; flex-wrap: wrap; align-items: flex-end; margin-bottom: 30px; background: #f9f9f9; padding: 20px; border-radius: 5px; }
+.field { display: flex; flex-direction: column; gap: 5px; }
+input, select { padding: 10px; border: 1px solid #ddd; border-radius: 4px; }
+.run-btn { padding: 10px 25px; background: var(--primary); color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; }
+
+/* RAM GRID */
+.ram-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 15px; margin-top: 20px; }
+.ram-cell { height: 100px; border: 2px solid #bdc3c7; border-radius: 5px; display: flex; flex-direction: column; align-items: center; justify-content: center; font-weight: bold; }
+.c-p1 { background: #d1ecf1; color: #0c5460; border-color: var(--p1); }
+.c-p2 { background: #d4edda; color: #155724; border-color: var(--p2); }
+.c-p3 { background: #fff3cd; color: #856404; border-color: var(--p3); }
+.c-free { background: var(--free); color: #95a5a6; border-style: dashed; }
+
+/* .comp-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+.comp-table th, .comp-table td { border: 1px solid #ddd; padding: 12px; text-align: left; } */
+
+/* Paging Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Header */
+table thead {
+    background: #2c3e50;
+    color: #ffffff;
+}
+
+table th {
+    padding: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Rows */
+table td {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Alternate rows */
+table tr:nth-child(even) {
+    background: #f8f9fa;
+}
+/* 
+table tr:hover {
+    background: #eaf4ff;
+} */
+
+/* Frame column */
+table td:first-child {
+    font-weight: 600;
+    background: #f1f3f5;
+}
+
+/* Empty cells */
+table td:contains("-") {
+    color: #aaa;
+}
+/* Empty vs Filled */
+.empty-cell {
+    color: #bbb;
+    font-style: italic;
+}
+
+.filled-cell {
+    font-weight: 600;
+    color: #2c3e50;
+}
+/* table tr:hover {
+    background: #eaf4ff;
+} */
